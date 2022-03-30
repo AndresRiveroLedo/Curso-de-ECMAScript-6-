@@ -30,3 +30,8 @@ console.log(epicPhrase2);
 
 //Nota: tener en cuenta que cuando escribo ${} estoy trayendo el valor de dicha variable, pero esto
 //funciona cuando usas comillas invertidas. 
+
+const obj = { name:'Andres', lastName: undefined } 
+const { name, lastname = "Perez" } = obj; 
+console.log(name, lastname)
+// console output -> pepe perez

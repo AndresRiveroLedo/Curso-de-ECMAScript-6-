@@ -101,12 +101,12 @@ Antes de ES6 pasaba esto:
     console.log(elsa);
 ```
 
-❤️ Esto funcionaba, sin embargo, no es una opcion muy óptima que digamos. Ahora usamos ES6: comillas francesas 👀
+❤️ Esto funcionaba, sin embargo, no es una opcion muy óptima que digamos. Ahora usamos ES6: `comillas francesas` 👀
 
 
 ```
-    let elsa2 = `Elsa2 Ejemplo: ssssssssssssssssssssssssssssssss
-    abasklmnksnknnrfgnmngkldfklklfgnklfnklnfg.`;
+    let elsa2 = `Elsa2 Ejemplo: no hace falta ni \n ni el +  para el salto
+    de linea. Las comillas francesas nos ayuda a saltar linea`;
     console.log(elsa2);
 ```
 
@@ -130,10 +130,15 @@ llamaremos al atributo correspondiente a la key name del objeto person.
 ❤️ **Ahora desestructuraremos nuestro objeto:** 👀
 ```
     let {name, age, country} = person;
-    console.log( name, age, country);
+    console.log( name, age, country); 
+    //Output: Jeff 24 ES
+
+    let {name, age} = person;
+    console.log( name, age); 
+    //Output: Jeff 24
 ```
 
-Con la anterior linea lo que hicimos fue desestructurar nuestro objeto, esta notación es usper util porque podemos elegir cuales keys necesitamos del mismo objeto y ya puedo proceder a desplegarlas en la consola sin necesidad de utilizar (objeto.key) 
+Con la anterior linea lo que hicimos fue desestructurar nuestro objeto, esta notación es super util porque podemos elegir cuales keys necesitamos del mismo objeto y ya puedo proceder a desplegarlas en la consola sin necesidad de utilizar (objeto.key) 
 
 **Ahora vamos a trabajar con array:**
 
@@ -144,16 +149,16 @@ Con la anterior linea lo que hicimos fue desestructurar nuestro objeto, esta not
     console.log(education);
 ```
 
-❤️ Ahora, queremos un array que contenga a team1 y team2. Pero además de esto, usaremos el (...), esto nos permite traer un array completo. 👀
+❤️ Ahora, queremos un array que contenga a team1 y team2. Pero además de esto, usaremos el spread operation(...), esto nos permite traer un array completo. 👀
 
 ```
     let education = ['David', ...team1, team2]; 👀💣
     console.log(education);
 ```
 
-/*Orginalmente se usaba (var) para asignar variables 👀💣
+Orginalmente se usaba (var) para asignar variables 👀💣
 Podemos ver que usamos mucho (let), pero ¿por qué? Bueno (let) se
-usa para el scope, es decir, se define para el bloqueu de código en el cual se va a usar.*/
+usa para el scope, es decir, se define para el bloqueu de código en el cual se va a usar.
 
 ```
     {
@@ -170,7 +175,7 @@ usa para el scope, es decir, se define para el bloqueu de código en el cual se 
 ```
 
 **¿Por qué no usar VAR?**  👀💣
-🗒️ Es un lenguaje debilmente tipado, es decir, cuando definimos una varibale con (var), podemos cambiar su valor en el transcurso del código y con esto podríamos ocasionar distintos bugs y errores en nuestro programa. Por dicho motivo es mejor usar Let y const */
+🗒️ Es un lenguaje debilmente tipado, es decir, cuando definimos una varibale con (var), podemos cambiar su valor en el transcurso del código y con esto podríamos ocasionar distintos bugs y errores en nuestro programa. Es mejor usar Let y const 
 
 ❤️❤️ A diferencia de (let), const no se puede modificar como si lo hacia VAR. 👀💣
 ```
@@ -179,10 +184,27 @@ usa para el scope, es decir, se define para el bloqueu de código en el cual se 
     console.log(a); //error
 
 ```
+Desestructuración De Objetos En Javascript: https://carlosescorche.com/blog/desestructuracion-de-objetos-en-javascript#:~:text=La%20desestructuraci%C3%B3n%20es%20una%20caracter%C3%ADstica,y%20crear%20c%C3%B3digo%20m%C3%A1s%20legible.
+
+## ¿var y let cumplen exactamente la misma función y tienen las mismas reglas o no?
+
+De forma rápida, te podría decir que una de las diferencias es que si tu declaras un var dentro de un if, este var puede seguir siendo accedido desde fuera del if, en cambio, si haces lo mismo con un let, si tratas de accederlo desde fuera del if te dará un error.
+
+Enlace a un blog que lo explica: https://platzi.com/tutoriales/1339-fundamentos-javascript/8812-deja-de-usar-var-en-javascript-por-que-no-es-buena-practica-usarlo/
+
+## ¿Hay alguna diferencia entre comillas simples y dobles o se usan en diferentes casos?
+
+Con respecto a lo de las comillas, no hay ninguna diferencia en realidad, puedes usar ambas sin problemas, pero siempre es buena práctica mantener la consistencia 😄
+
+## ¿spread operator solo sirve para arreglos o tambien sirve para JSONs?
+
+Puedes utilizar el spread operator en cualquier cosa que sea iterable en el caso de JavaScript ahorita se me ocurren arrays y strings (los objetos no son iterables).
+
+En el caso de un archivo JSON no podrías hacerlo con el archivo completo, pero sí con alguna de sus propiedades que sean iterables.
 
 # 📹 Video 4 - Arrow Functions, Promesas y Parámetros en objetos
 
-Antes para crear un objeto en ECMAS 5:
+Antes para crear un objeto en ECMAS 5:   
 
 ```
     let name = 'Oscar';

@@ -151,7 +151,7 @@ Con la anterior linea lo que hicimos fue desestructurar nuestro objeto, esta not
     console.log(education);
 ```
 
-/*Orginalmente se usaba (var) para asignar variables 👀💣
+Orginalmente se usaba (var) para asignar variables 👀💣
 Podemos ver que usamos mucho (let), pero ¿por qué? Bueno (let) se
 usa para el scope, es decir, se define para el bloqueu de código en el cual se va a usar.*/
 
@@ -182,7 +182,7 @@ usa para el scope, es decir, se define para el bloqueu de código en el cual se 
 
 # 📹 Video 4 - Arrow Functions, Promesas y Parámetros en objetos
 
-Antes para crear un objeto en ECMAS 5:
+Antes para crear un objeto en ECMAS 5:   
 
 ```
     let name = 'Oscar';
